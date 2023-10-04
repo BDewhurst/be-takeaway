@@ -1,0 +1,5 @@
+exports.commentData = require('./comments')
+exports.cuisineData = require('./cuisine')
+exports.itemsData = require('./items')
+exports.restaurantData =require('./restaurants')
+exports.usersData = require('./users')

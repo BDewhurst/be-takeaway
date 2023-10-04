@@ -1,0 +1,5 @@
+DROP DATABASE IF EXISTS takeaway_test;
+DROP DATABASE IF EXISTS takeaway;
+
+CREATE DATABASE takeaway_test;
+CREATE DATABASE takeaway;
