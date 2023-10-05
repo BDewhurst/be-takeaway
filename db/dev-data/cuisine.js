@@ -1,6 +1,6 @@
 module.exports = [
     { slug: 'Chinese' },
-    { slug: 'American-style' },
+    { slug: 'American-Style' },
     { slug: 'Indian' },
     { slug: 'Italian' },
     { slug: 'Japanese' },
@@ -14,5 +14,6 @@ module.exports = [
     { slug: 'Korean' },
     { slug: 'Vietnamese' },
     { slug: 'Brazilian' },
-    {slug: 'Vegetarian'}
+    {slug: 'Vegetarian'},
+    {slug: 'Seafood'},
   ];

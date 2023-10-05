@@ -1,4 +1,4 @@
-module.exports [
+module.exports =[
     {
       "name": "The Manchester Grill",
       "address": "123 Main Street, Manchester, M1 1AB",
@@ -58,14 +58,14 @@ module.exports [
     {
       "name": "Pizza Palace",
       "address": "909 Pine Lane, Manchester, M9 9QR",
-      "cuisine": "Pizza",
+      "cuisine": "Italian",
       "rating": 4.8,
       "image_url": "https://example.com/restaurant9.jpg"
     },
     {
       "name": "Dessert Dreamland",
       "address": "1010 Cedar Street, Manchester, M10 10ST",
-      "cuisine": "Desserts",
+      "cuisine": "American-Style",
       "rating": 4.9,
       "image_url": "https://example.com/restaurant10.jpg"
     }
