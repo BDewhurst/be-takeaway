@@ -2,7 +2,7 @@ module.exports = [
     {
       "name": "The Manchester Grill",
       "address": "123 Main Street, Manchester, M1 1AB",
-      "cuisine": "Steakhouse",
+      "cuisine": "Japanese",
       "rating": 4.5,
       "image_url": "https://example.com/restaurant1.jpg"
     },
