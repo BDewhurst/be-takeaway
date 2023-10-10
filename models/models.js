@@ -7,7 +7,13 @@ exports.selectAllCuisines = () => {
   };
 
 exports.selectAllRestaurants = () => {
-  return db.query(`SELECT * FROM restaurants`).then(({rows}) => {
+  return db.query(`SELECT * FROM restaurants;`).then(({rows}) => {
+    return rows
+  })
+}
+
+exports.selectRestaurantById = (restaurantId) => {
+  return db.query(`SELECT * FROM restaurants WHERE restaurant_id = $1;`, [restaurantId]).then(({rows})=> {
     return rows
   })
 }
