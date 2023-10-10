@@ -13,7 +13,7 @@ afterAll(() => {
 });
 
 describe("GET /api/cuisines", () => {
-    test("200 responds with an array of all topics", () => {
+    test("200 responds with an array of all cuisines", () => {
         return request(app)
             .get('/api/cuisines')
             .expect(200)
@@ -23,6 +23,25 @@ describe("GET /api/cuisines", () => {
                 cuisines.forEach((cuisine) => {
                     expect(cuisine).toHaveProperty("slug", expect.any(String))
                    
+                })
+            })
+    })
+})
+describe("GET /api/restaurants", () => {
+    test("200 responds with an array of all restaurants", () => {
+        return request(app)
+            .get('/api/restaurants')
+            .expect(200)
+            .then(({ body }) => {
+                const restaurants = body;
+                expect(restaurants).toHaveLength(5)
+                restaurants.forEach((restaurant) => {
+                    expect(restaurant).toHaveProperty("address", expect.any(String))
+                    expect(restaurant).toHaveProperty("cuisine", expect.any(String))
+                    expect(restaurant).toHaveProperty("name", expect.any(String))
+                    expect(restaurant).toHaveProperty("rating", expect.any(String))
+                    expect(restaurant).toHaveProperty("restaurant_id", expect.any(Number))
+                    expect(restaurant).toHaveProperty("article_img_url");
                 })
             })
     })

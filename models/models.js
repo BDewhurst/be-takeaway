@@ -5,3 +5,9 @@ exports.selectAllCuisines = () => {
       return rows;
     });
   };
+
+exports.selectAllRestaurants = () => {
+  return db.query(`SELECT * FROM restaurants`).then(({rows}) => {
+    return rows
+  })
+}
