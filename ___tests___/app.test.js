@@ -85,3 +85,20 @@ describe("GET /api/items/:restaurantId", () => {
             })
     })
 })
+describe("GET /api/users/:username", () => {
+    test("200 responds with an array of all restaurants", () => {
+        return request(app)
+            .get('/api/users/rogersop')
+            .expect(200)
+            .then(({ body }) => {
+                const user = body;
+                expect(user).toHaveLength(1)
+                user.forEach((user) => {
+                    expect(user).toHaveProperty("avatar_url", expect.any(String))
+                    expect(user).toHaveProperty("username", expect.any(String))
+                    expect(user).toHaveProperty("name", expect.any(String))
+                  
+                })
+            })
+    })
+})
