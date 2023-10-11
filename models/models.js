@@ -17,3 +17,9 @@ exports.selectRestaurantById = (restaurantId) => {
     return rows
   })
 }
+
+exports.selectItemsByRestaurantId = (restaurantId) => {
+  return db.query(`SELECT * FROM items WHERE restaurant_id = $1`, [restaurantId]).then(({rows}) => {
+    return rows
+  })
+}

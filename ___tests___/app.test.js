@@ -65,3 +65,23 @@ describe("GET /api/restaurants/:restaurantId", () => {
             })
     })
 })
+
+describe("GET /api/items/:restaurantId", () => {
+    test("200 responds with an array of all restaurants", () => {
+        return request(app)
+            .get('/api/items/3')
+            .expect(200)
+            .then(({ body }) => {
+                const items = body;
+                expect(items).toHaveLength(4)
+                items.forEach((item) => {
+                    expect(item).toHaveProperty("item_id", expect.any(Number))
+                    expect(item).toHaveProperty("description", expect.any(String))
+                    expect(item).toHaveProperty("name", expect.any(String))
+                    expect(item).toHaveProperty("price", expect.any(String))
+                    expect(item).toHaveProperty("restaurant_id", expect.any(Number))
+                  
+                })
+            })
+    })
+})
