@@ -1,4 +1,4 @@
-const {selectAllCuisines, selectAllRestaurants, selectRestaurantById, selectItemsByRestaurantId, selectUserByUsername} = require('../models/models')
+const {selectAllCuisines, selectAllRestaurants, selectRestaurantById, selectItemsByRestaurantId, selectUserByUsername, patchRestaurantRating} = require('../models/models')
 
 exports.getAllCuisines = (req, res, next) => {
     selectAllCuisines().then((cuisine) => {
@@ -31,5 +31,13 @@ exports.getUserByUsername = (req, res, next) => {
     const {username} = req.params
     selectUserByUsername(username).then((user) => {
         res.status(200).send(user)
+    }).catch(next)
+}
+
+exports.patchRating = (req, res, next) => {
+    const rating = req.body
+    const {restaurantId} = req.params
+    patchRestaurantRating(restaurantId, rating).then((rating) => {
+        res.status(200).send(rating)
     }).catch(next)
 }

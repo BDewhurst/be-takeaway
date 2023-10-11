@@ -41,6 +41,7 @@ const seed = ({ commentData, cuisineData, itemsData, usersData, restaurantData }
         address VARCHAR NOT NULL,
         cuisine VARCHAR NOT NULL REFERENCES cuisine(slug),
         rating DECIMAL(4, 2) DEFAULT 0 NOT NULL,
+        amount_of_votes INT DEFAULT 0 NOT NULL, 
         article_img_url VARCHAR DEFAULT 'https://images.pexels.com/photos/97050/pexels-photo-97050.jpeg?w=700&h=700'
       );`);
     })

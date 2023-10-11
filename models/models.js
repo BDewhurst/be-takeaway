@@ -29,3 +29,14 @@ return db.query(`SELECT * FROM users WHERE username = $1`, [username]).then(({ro
   return rows
 })
 }
+
+exports.patchRestaurantRating = (restaurantId, rating) => {
+  const {inc_vote} = rating
+  return db.query(`UPDATE restaurants
+  SET amount_of_votes = amount_of_votes + 1,
+  rating = (rating * amount_of_votes + $2) / (amount_of_votes + 1)
+  WHERE restaurant_id = $1
+  RETURNING *;`, [restaurantId, inc_vote]).then(({rows}) => {
+    return rows
+  })
+}

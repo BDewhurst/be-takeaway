@@ -102,3 +102,44 @@ describe("GET /api/users/:username", () => {
             })
     })
 })
+describe("patch /api/restaurant/:restaurantId", () => {
+    test("200 responds with an array of all restaurants", () => {
+        const update = { "inc_vote": 5 }
+        const update2 = {"inc_vote": 3 }
+        return request(app)
+        
+            .patch('/api/restaurants/2')
+            .send(update)
+            .expect(200)
+            .then(({ body }) => {
+                const restaurant = body;
+                expect(restaurant).toHaveLength(1)
+                restaurant.forEach((newRestaurant) => {
+                    expect(newRestaurant).toHaveProperty("restaurant_id", expect.any(Number))
+                    expect(newRestaurant).toHaveProperty("address", expect.any(String))
+                    expect(newRestaurant).toHaveProperty("rating", expect.any(String))
+                    expect(newRestaurant).toHaveProperty("cuisine", expect.any(String))
+                    expect(newRestaurant.rating).toEqual('5.00')
+                    expect(newRestaurant.amount_of_votes).toEqual(1)
+                  
+                })
+                return request(app)
+                .patch('/api/restaurants/2')
+            .send(update2)
+            .expect(200)
+            .then(({ body }) => {
+                const restaurant = body;
+                expect(restaurant).toHaveLength(1)
+                restaurant.forEach((newRestaurant) => {
+                    expect(newRestaurant).toHaveProperty("restaurant_id", expect.any(Number))
+                    expect(newRestaurant).toHaveProperty("address", expect.any(String))
+                    expect(newRestaurant).toHaveProperty("rating", expect.any(String))
+                    expect(newRestaurant).toHaveProperty("cuisine", expect.any(String))
+                    expect(newRestaurant.rating).toEqual('4.00')
+                    expect(newRestaurant.amount_of_votes).toEqual(2)
+                  
+                })
+            })
+        })
+    })
+})
