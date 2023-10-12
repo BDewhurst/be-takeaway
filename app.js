@@ -1,3 +1,5 @@
+const cors = require('cors');
+app.use(cors());
 const {getAllCuisines, getAllRestaurants, getRestaurantbyId, getItemByRestaurantId, getUserByUsername, patchRating} = require('./controllers/controllers')
 const express = require("express");
 const app = express();
