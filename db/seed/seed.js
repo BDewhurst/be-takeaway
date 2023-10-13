@@ -21,7 +21,8 @@ const seed = ({ commentData, cuisineData, itemsData, usersData, restaurantData }
     .then(() => {
       const cuisineTablePromise = db.query(`
       CREATE TABLE cuisine (
-        slug VARCHAR PRIMARY KEY
+        slug VARCHAR PRIMARY KEY, 
+        article_img_url VARCHAR
       );`);
 
       const usersTablePromise = db.query(`
@@ -68,8 +69,8 @@ const seed = ({ commentData, cuisineData, itemsData, usersData, restaurantData }
     })
     .then(() => {
       const insertcuisineQueryStr = format(
-        'INSERT INTO cuisine (slug) VALUES %L;',
-        cuisineData.map(({ slug }) => [slug])
+        'INSERT INTO cuisine (slug, article_img_url) VALUES %L;',
+        cuisineData.map(({ slug, article_img_url }) => [slug, article_img_url])
       );
       const cuisinePromise = db.query(insertcuisineQueryStr);
       const insertUsersQueryStr = format(
