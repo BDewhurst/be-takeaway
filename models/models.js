@@ -40,3 +40,10 @@ exports.patchRestaurantRating = (restaurantId, rating) => {
     return rows
   })
 }
+
+exports.selectAllCommentsById = (restaurantId) => {
+  return db.query(`SELECT * FROM comments
+  WHERE restaurant_id = $1;`, [restaurantId]).then(({rows}) => {
+    return rows
+  })
+}

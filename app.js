@@ -1,5 +1,5 @@
 
-const {getAllCuisines, getAllRestaurants, getRestaurantbyId, getItemByRestaurantId, getUserByUsername, patchRating} = require('./controllers/controllers')
+const {getAllCuisines, getAllRestaurants, getRestaurantbyId, getItemByRestaurantId, getUserByUsername, patchRating, getCommentsbyId} = require('./controllers/controllers')
 const express = require("express");
 const cors = require('cors');
 const app = express();
@@ -13,3 +13,4 @@ app.get('/api/restaurants/:restaurantId', getRestaurantbyId)
 app.get('/api/items/:restaurantId', getItemByRestaurantId)
 app.get('/api/users/:username', getUserByUsername)
 app.patch('/api/restaurants/:restaurantId', patchRating)
+app.get('/api/comments/:restaurantId', getCommentsbyId)

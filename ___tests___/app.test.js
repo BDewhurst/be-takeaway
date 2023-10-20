@@ -1,6 +1,6 @@
 const request = require("supertest");
 const app = require('../app');
-const db = require("../connection");
+const db = require("../db/connection");
 const seed = require("../db/seed/seed");
 const data = require("../db/test-data/index");
 
@@ -141,5 +141,24 @@ describe("patch /api/restaurant/:restaurantId", () => {
                 })
             })
         })
+    })
+})
+describe("GET /api/restaurants/:restaurantId", () => {
+    test("200 responds with an array of all restaurants", () => {
+        return request(app)
+            .get('/api/comments/3')
+            .expect(200)
+            .then(({ body }) => {
+                const comments = body;
+                expect(comments).toHaveLength(1)
+                comments.forEach((comment) => {
+                    expect(comment).toHaveProperty("author", expect.any(String))
+                    expect(comment).toHaveProperty("created_at", expect.any(String))
+                    expect(comment).toHaveProperty("description", expect.any(String))
+                    expect(comment).toHaveProperty("votes", expect.any(Number))
+                    expect(comment).toHaveProperty("restaurant_id", expect.any(Number))
+                    expect(comment).toHaveProperty("comment_id", expect.any(Number));
+                })
+            })
     })
 })
