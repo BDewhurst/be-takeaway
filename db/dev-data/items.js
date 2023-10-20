@@ -208,6 +208,184 @@ module.exports = [
       "description": "Deep-fried dough pastry dusted with cinnamon sugar, served with chocolate dipping sauce.",
       "price": 6.99,
       "restaurant_id": 5
+    },   {
+      "name": "Salmon Teriyaki",
+      "description": "Grilled salmon fillet glazed with teriyaki sauce, served with steamed rice and vegetables.",
+      "price": 20.99,
+      "restaurant_id": 1
+    },
+    {
+      "name": "Caprese Salad",
+      "description": "Fresh mozzarella cheese, tomatoes, basil, and balsamic glaze.",
+      "price": 9.75,
+      "restaurant_id": 2
+    },
+    {
+      "name": "Chicken Alfredo",
+      "description": "Fettuccine pasta with creamy Alfredo sauce and grilled chicken.",
+      "price": 16.49,
+      "restaurant_id": 3
+    },
+    {
+      "name": "Beef Bulgogi",
+      "description": "Thinly sliced marinated beef stir-fried with vegetables, served with rice.",
+      "price": 18.95,
+      "restaurant_id": 4
+    },
+    {
+      "name": "Mushroom Risotto",
+      "description": "Creamy Italian rice dish cooked with mushrooms, onions, and Parmesan cheese.",
+      "price": 15.99,
+      "restaurant_id": 5
+    },
+    {
+      "name": "Vegetable Tempura",
+      "description": "Assorted vegetables lightly battered and deep-fried, served with dipping sauce.",
+      "price": 12.25,
+      "restaurant_id": 6
+    },
+    {
+      "name": "California Roll",
+      "description": "Sushi roll with crab, avocado, and cucumber.",
+      "price": 10.50,
+      "restaurant_id": 7
+    },
+    {
+      "name": "Eggplant Parmesan",
+      "description": "Breaded and fried eggplant slices layered with marinara sauce and cheese.",
+      "price": 13.99,
+      "restaurant_id": 8
+    },
+    {
+      "name": "Lobster Bisque",
+      "description": "Creamy soup made with lobster, onions, and seasoned with herbs.",
+      "price": 11.95,
+      "restaurant_id": 9
+    },
+    {
+      "name": "Cheesecake",
+      "description": "New York-style cheesecake topped with strawberries and whipped cream.",
+      "price": 8.99,
+      "restaurant_id": 10
+    },   {
+      "name": "Lemon Herb Roasted Chicken",
+      "description": "Tender roasted chicken marinated in lemon and herbs, served with roasted vegetables.",
+      "price": 17.99,
+      "restaurant_id": 1
+    },
+    {
+      "name": "Mango Curry Tofu",
+      "description": "Tofu cubes cooked in a rich mango curry sauce, served with jasmine rice.",
+      "price": 14.95,
+      "restaurant_id": 2
+    },
+    {
+      "name": "Margherita Flatbread",
+      "description": "Thin flatbread topped with tomato sauce, mozzarella cheese, fresh basil, and balsamic glaze.",
+      "price": 11.50,
+      "restaurant_id": 3
+    },
+    {
+      "name": "Seafood Paella",
+      "description": "Spanish rice dish with assorted seafood, vegetables, and flavorful spices.",
+      "price": 22.75,
+      "restaurant_id": 4
+    },
+    {
+      "name": "Avocado BLT Sandwich",
+      "description": "Classic BLT sandwich with creamy avocado slices on toasted bread.",
+      "price": 13.25,
+      "restaurant_id": 5
+    },
+    {
+      "name": "Sesame Crusted Ahi Tuna",
+      "description": "Ahi tuna steak coated in sesame seeds, seared to perfection, and served with wasabi sauce.",
+      "price": 19.99,
+      "restaurant_id": 6
+    },
+    {
+      "name": "Miso Ramen",
+      "description": "Japanese noodle soup with miso broth, tofu, seaweed, green onions, and bamboo shoots.",
+      "price": 12.95,
+      "restaurant_id": 7
+    },
+    {
+      "name": "Eggplant Rollatini",
+      "description": "Thinly sliced eggplant rolled with ricotta cheese, baked in marinara sauce, and topped with mozzarella.",
+      "price": 15.49,
+      "restaurant_id": 8
+    },
+    {
+      "name": "Shrimp and Grits",
+      "description": "Creamy grits topped with sautéed shrimp, bacon, and a rich Cajun sauce.",
+      "price": 18.95,
+      "restaurant_id": 9
+    },
+    {
+      "name": "Key Lime Pie",
+      "description": "Refreshing key lime pie with a graham cracker crust, topped with whipped cream.",
+      "price": 9.49,
+      "restaurant_id": 10
+    }, 
+    {
+      "name": "Rack of Lamb",
+      "description": "Herb-marinated rack of lamb, roasted to perfection, and served with mint sauce.",
+      "price": 25.99,
+      "restaurant_id": 1
+    },
+    {
+      "name": "Vegetable Biryani",
+      "description": "Fragrant basmati rice cooked with mixed vegetables, aromatic spices, and saffron.",
+      "price": 16.50,
+      "restaurant_id": 2
+    },
+    {
+      "name": "Margherita Pizza",
+      "description": "Thin crust pizza with tomato sauce, fresh mozzarella, basil, and a drizzle of olive oil.",
+      "price": 13.75,
+      "restaurant_id": 3
+    },
+    {
+      "name": "Lobster Roll",
+      "description": "Buttery lobster chunks mixed with mayonnaise, celery, and spices, served in a toasted bun.",
+      "price": 20.95,
+      "restaurant_id": 4
+    },
+    {
+      "name": "Quinoa Salad",
+      "description": "Nutritious quinoa mixed with fresh vegetables, feta cheese, olives, and a zesty vinaigrette.",
+      "price": 11.99,
+      "restaurant_id": 5
+    },
+    {
+      "name": "Baked Salmon",
+      "description": "Salmon fillet baked with lemon, garlic, and herbs, served with roasted vegetables.",
+      "price": 19.75,
+      "restaurant_id": 6
+    },
+    {
+      "name": "Tempura Udon",
+      "description": "Japanese udon noodles served in a hot dashi broth with tempura shrimp and vegetables.",
+      "price": 14.95,
+      "restaurant_id": 7
+    },
+    {
+      "name": "Eggplant Parmesan Sandwich",
+      "description": "Breaded and fried eggplant slices with marinara sauce and mozzarella, served in a hoagie roll.",
+      "price": 12.25,
+      "restaurant_id": 8
+    },
+    {
+      "name": "Shrimp and Crab Gumbo",
+      "description": "Hearty Louisiana gumbo with shrimp, crab, sausage, okra, and rice.",
+      "price": 17.99,
+      "restaurant_id": 9
+    },
+    {
+      "name": "Mango Cheesecake",
+      "description": "Creamy cheesecake with swirls of fresh mango puree, topped with mango slices.",
+      "price": 10.49,
+      "restaurant_id": 10
     }
 ]
   

@@ -54,7 +54,7 @@ const seed = ({ commentData, cuisineData, itemsData, usersData, restaurantData }
         author VARCHAR REFERENCES users(username) NOT NULL,
         description VARCHAR NOT NULL,
         restaurant_id INT REFERENCES restaurants(restaurant_id) NOT NULL,
-        votes INT DEFAULT 0 NOT NULL);`);
+        votes INT DEFAULT 1 NOT NULL);`);
     })
     .then(()=> {
         return db.query(`
