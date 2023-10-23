@@ -143,8 +143,8 @@ describe("patch /api/restaurant/:restaurantId", () => {
         })
     })
 })
-describe("GET /api/restaurants/:restaurantId", () => {
-    test("200 responds with an array of all restaurants", () => {
+describe("GET /api/comments/:restaurantId", () => {
+    test("200 responds with an array of all comments", () => {
         return request(app)
             .get('/api/comments/3')
             .expect(200)

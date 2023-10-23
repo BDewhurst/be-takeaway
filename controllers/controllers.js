@@ -1,4 +1,4 @@
-const {selectAllCuisines, selectAllRestaurants, selectRestaurantById, selectItemsByRestaurantId, selectUserByUsername, patchRestaurantRating, selectAllCommentsById} = require('../models/models')
+const {selectAllCuisines, selectAllRestaurants, selectRestaurantById, selectItemsByRestaurantId, selectUserByUsername, patchRestaurantRating, selectAllCommentsById, selectAllRestaurantsByCuisine} = require('../models/models')
 
 exports.getAllCuisines = (req, res, next) => {
     selectAllCuisines().then((cuisine) => {
@@ -48,4 +48,11 @@ exports.getCommentsbyId = (req, res, next) => {
 
         res.status(200).send(comments)
     }).catch(next)
+}
+
+exports.getAllRestaurantsByCuisine = (req, res, next) => {
+    const {cuisine} = req.params
+    selectAllRestaurantsByCuisine(cuisine).then((restaurant) => {
+        res.status(200).send(restaurant)
+    })
 }

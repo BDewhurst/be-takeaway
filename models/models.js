@@ -47,3 +47,10 @@ exports.selectAllCommentsById = (restaurantId) => {
     return rows
   })
 }
+
+exports.selectAllRestaurantsByCuisine = (cuisine) => {
+return db.query (`SELECT * FROM restaurants
+WHERE cuisine = $1;`, [cuisine]).then(({rows}) => {
+  return rows
+})
+}
