@@ -54,3 +54,13 @@ WHERE cuisine = $1;`, [cuisine]).then(({rows}) => {
   return rows
 })
 }
+
+exports.postCommentForRestaurant = (comment, restaurantId) => {
+  const {author, description} = comment
+  return db.query(`
+  INSERT INTO comments ( author, description, restaurant_id)
+  VALUES ($1, $2, $3)
+  RETURNING *;`, [author, description, restaurantId]).then(({rows})=> {
+    return rows
+  })
+}
