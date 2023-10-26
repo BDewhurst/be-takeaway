@@ -1,5 +1,5 @@
 
-const {getAllCuisines, getAllRestaurants, getRestaurantbyId, getItemByRestaurantId, getUserByUsername, patchRating, getCommentsbyId, getAllRestaurantsByCuisine, postComment} = require('./controllers/controllers')
+const {getAllCuisines, getAllRestaurants, getRestaurantbyId, getItemByRestaurantId, getUserByUsername, patchRating, getCommentsbyId, getAllRestaurantsByCuisine, postComment, deleteComment} = require('./controllers/controllers')
 const express = require("express");
 const cors = require('cors');
 const app = express();
@@ -16,3 +16,4 @@ app.patch('/api/restaurants/:restaurantId', patchRating)
 app.get('/api/comments/:restaurantId', getCommentsbyId)
 app.get('/api/cuisines/:cuisine', getAllRestaurantsByCuisine)
 app.post('/api/comments/:restaurantId', postComment)
+app.delete('/api/comments/:commentId', deleteComment)
