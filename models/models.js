@@ -65,10 +65,9 @@ exports.postCommentForRestaurant = (comment, restaurantId) => {
   })
 }
 
-exports.deleteCommentById = (commentId, username) => {
-  const {author} = username 
-  return db.query (`DELETE FROM comments WHERE comment_id = $1
-  AND author = $2;`, [author, commentId]).then(({rows}) => {
+exports.deleteCommentById = (commentId) => { 
+  return db.query (`DELETE FROM comments WHERE comment_id = $1;`
+  , [commentId]).then(({rows}) => {
     return rows
   })
 }

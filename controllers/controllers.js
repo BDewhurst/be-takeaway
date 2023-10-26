@@ -68,8 +68,7 @@ exports.postComment = (req, res, next) => {
 
 exports.deleteComment = (req, res, next) => {
     const {commentId} = req.params 
-    const username = req.body
-    deleteCommentById(username, commentId).then((comment) => {
+    deleteCommentById(commentId).then((comment) => {
         res.status(200).send(comment)
     })
 }
